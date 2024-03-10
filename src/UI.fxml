@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="root_layout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.leaf.WindowController">
+   <children>
+      <Pane prefHeight="94.0" prefWidth="500.0" />
+      <GridPane alignment="CENTER" prefHeight="220.0" prefWidth="500.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="102.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="122.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="353.0" minWidth="10.0" prefWidth="278.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Label layoutX="2.0" layoutY="17.0" prefHeight="18.0" prefWidth="91.0" text="AppName">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <TextField fx:id="name_text" layoutX="10.0" layoutY="14.0" prefHeight="24.0" prefWidth="246.0" promptText="Application Name" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label layoutY="14.0" prefHeight="18.0" prefWidth="91.0" text="FileLocation">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TextField fx:id="exec_text" layoutX="9.0" layoutY="14.0" prefHeight="24.0" prefWidth="176.0" promptText="Executable File Location" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="52.0" prefWidth="86.0">
+                     <children>
+                        <Button fx:id="choose_file" layoutY="14.0" mnemonicParsing="false" onAction="#chooseExecFile" prefHeight="24.0" prefWidth="69.0" text="File" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label layoutX="1.0" layoutY="10.0" prefHeight="18.0" prefWidth="91.0" text="Terminal">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <CheckBox fx:id="terminal_check" layoutX="43.0" layoutY="12.0" mnemonicParsing="false" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Label layoutY="14.0" prefHeight="18.0" prefWidth="76.0" text="Type">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <children>
+                  <TextField fx:id="type_text" layoutX="9.0" layoutY="9.0" prefHeight="24.0" prefWidth="246.0" text="Application" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="4">
+               <children>
+                  <CheckBox fx:id="has_icon_check" layoutX="42.0" layoutY="13.0" mnemonicParsing="false" selected="true" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Label layoutY="13.0" prefHeight="18.0" prefWidth="69.0" text="Icon">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <children>
+                  <Pane prefHeight="44.0" prefWidth="297.0">
+                     <children>
+                        <TextField fx:id="icon_text" layoutX="9.0" layoutY="10.0" promptText="Image Location" />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="choose_icon" layoutX="8.0" layoutY="10.0" mnemonicParsing="false" onAction="#chooseIconFile" prefHeight="24.0" prefWidth="69.0" text="File" />
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="5">
+               <children>
+                  <CheckBox fx:id="has_comment_check" layoutX="42.0" layoutY="9.0" mnemonicParsing="false" selected="true" />
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <children>
+                  <Label layoutY="9.0" prefHeight="18.0" prefWidth="91.0" text="Comment">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <children>
+                  <TextField fx:id="comment_text" layoutX="9.0" layoutY="10.0" prefHeight="24.0" prefWidth="246.0" promptText="Comment" />
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+      <Pane prefHeight="100.0" prefWidth="500.0">
+         <children>
+            <Button fx:id="export_button" layoutX="71.0" layoutY="27.0" mnemonicParsing="false" onAction="#exportEntryFile" prefHeight="46.0" prefWidth="101.0" text="Export" />
+            <Button fx:id="install_button" layoutX="225.0" layoutY="17.0" mnemonicParsing="false" onAction="#copyFileToUsrShareApplication" prefHeight="66.0" prefWidth="234.0" text="Copy To /usr/share/applications (need permission)" wrapText="true" />
+         </children>
+      </Pane>
+   </children>
+</VBox>
